@@ -194,7 +194,7 @@ Am I ready?
 
 ### Deployment
 - Vercel
-- Cloud backend hosting
+- Render backend hosting
 
 ---
 
