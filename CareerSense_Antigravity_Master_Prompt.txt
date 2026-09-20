@@ -1,0 +1,733 @@
+CAREERSENSE — ANTIGRAVITY MASTER BUILD PROMPT
+
+1. PROJECT OVERVIEW
+
+I want to build a polished, hackathon-ready web application called CareerSense.
+
+The core problem:
+
+Students often learn random technologies from YouTube, courses, bootcamps, and social media without knowing:
+
+- What should I learn next?
+- Am I actually job-ready?
+- Which skills am I missing?
+- What projects should I build?
+- How should I prepare for a specific role?
+- What should my learning roadmap look like?
+
+SOLUTION
+
+CareerSense is an AI-powered career and learning platform where a student provides:
+
+- Current skills
+- Projects
+- Interests
+- Target career role
+
+The application analyzes their current profile and generates:
+
+- Skill gaps
+- Job-readiness insights
+- Personalized learning roadmap
+- Relevant project recommendations
+- Resume/portfolio improvement suggestions
+- Interview preparation
+
+The goal is to make CareerSense feel like a personal AI career mentor, not simply an AI chatbot.
+
+--------------------------------------------------
+2. CURRENT SCOPE
+--------------------------------------------------
+
+IMPORTANT:
+
+Build ONLY the features described in this prompt.
+
+I have additional features planned for the future, but they should NOT be implemented yet unless explicitly requested.
+
+The current core features are:
+
+1. Skill Assessment
+2. AI Gap Analysis
+3. Personalized Roadmap
+4. Project Generator
+5. Resume/Portfolio Analyzer
+6. AI Interview Mode
+
+Do not invent major features or expand the product scope without asking.
+
+--------------------------------------------------
+3. PRIMARY USER FLOW
+--------------------------------------------------
+
+The main user journey should be:
+
+Landing Page
+→ Create/Enter Profile
+→ Current Skills + Target Role
+→ AI Analysis
+→ Skill Gap Analysis
+→ Personalized Roadmap
+→ Project Recommendations
+
+Conceptually:
+
+User Profile
+      ↓
+Current Skills + Experience + Projects
+      +
+Target Role
+      ↓
+AI Analysis
+      ↓
+┌───────────────────────┐
+│ Skill Gap Analysis    │
+│ Job Readiness         │
+│ Learning Roadmap      │
+│ Project Suggestions   │
+└───────────────────────┘
+
+Additional features should be accessible from the dashboard.
+
+--------------------------------------------------
+4. CORE FEATURE — SKILL ASSESSMENT
+--------------------------------------------------
+
+The student should be able to enter their current skills.
+
+Example:
+
+Frontend:
+- HTML
+- CSS
+- JavaScript
+- React
+
+Backend:
+- Node.js
+- Express
+- MongoDB
+
+Programming:
+- Python
+- C++
+
+AI/ML:
+- Python
+- NumPy
+- Pandas
+- Scikit-learn
+
+The UI should allow the user to:
+
+- Add skills
+- Remove skills
+- Categorize skills
+- Indicate proficiency level
+- Optionally provide experience/project evidence
+
+Possible proficiency levels:
+
+- Beginner
+- Intermediate
+- Advanced
+
+The interface should be intuitive and visually appealing.
+
+--------------------------------------------------
+5. CORE FEATURE — AI GAP ANALYSIS
+--------------------------------------------------
+
+The user selects a target role.
+
+Examples:
+
+- Full Stack Developer
+- Software Engineer
+- AI/ML Engineer
+- Data Scientist
+- GenAI Engineer
+- Backend Developer
+
+The system compares:
+
+CURRENT SKILLS
+vs
+TARGET ROLE REQUIREMENTS
+
+and identifies:
+
+- Existing strengths
+- Missing skills
+- Skills requiring improvement
+- Recommended priority
+
+Example:
+
+Target Role:
+Full Stack Developer
+
+Current:
+
+✓ HTML
+✓ CSS
+✓ JavaScript
+✓ React
+
+Missing:
+
+⚠ Node.js
+⚠ Express
+⚠ MongoDB
+⚠ Authentication
+⚠ REST API design
+⚠ Deployment
+
+The UI should make this information easy to understand.
+
+Do not present an arbitrary "AI score" without explaining what contributes to it.
+
+--------------------------------------------------
+6. CORE FEATURE — PERSONALIZED ROADMAP
+--------------------------------------------------
+
+Based on:
+
+- Current skills
+- Skill gaps
+- Target role
+- Experience level
+- Available learning time
+
+Generate a personalized roadmap.
+
+Example:
+
+PHASE 1 — JavaScript Foundations
+Duration: 5 days
+
+Topics:
+- Async JavaScript
+- Promises
+- Fetch API
+- Error handling
+
+PHASE 2 — React
+Duration: 7 days
+
+Topics:
+- Components
+- Props
+- State
+- Hooks
+- API integration
+
+PHASE 3 — Backend
+Duration: 10 days
+
+Topics:
+- Node.js
+- Express
+- REST APIs
+- MongoDB
+
+The roadmap should visually communicate:
+
+- Progress
+- Priority
+- Dependencies
+- Estimated duration
+- Completed/upcoming topics
+
+--------------------------------------------------
+7. CORE FEATURE — PROJECT GENERATOR
+--------------------------------------------------
+
+Based on the user's:
+
+- Current skills
+- Target role
+- Skill gaps
+- Experience level
+
+Generate practical projects.
+
+Each project should include:
+
+- Project title
+- Problem statement
+- Why this project is useful
+- Difficulty
+- Technologies
+- Skills learned
+- Core features
+- Optional advanced features
+- Estimated duration
+
+Example:
+
+Project:
+AI Expense Analyzer
+
+Stack:
+React + Node.js + MongoDB + AI API
+
+Skills developed:
+- REST APIs
+- Authentication
+- Database design
+- AI integration
+- Deployment
+
+Projects should be designed to close the user's identified skill gaps rather than simply generating random project ideas.
+
+--------------------------------------------------
+8. CORE FEATURE — RESUME / PORTFOLIO ANALYZER
+--------------------------------------------------
+
+The user should be able to:
+
+- Upload a resume
+OR
+- Paste resume text
+
+The system analyzes the resume against the selected target role.
+
+It should identify:
+
+- Missing skills
+- Weak project descriptions
+- Missing measurable achievements
+- Technology gaps
+- Role relevance
+- Areas for improvement
+
+It should provide actionable suggestions.
+
+Example:
+
+Current:
+"Created an e-commerce website using React."
+
+Suggested improvement:
+"Built a responsive e-commerce application using React with product filtering, cart management and API integration."
+
+Do not claim that the system provides a guaranteed ATS score or guarantees employment.
+
+--------------------------------------------------
+9. CORE FEATURE — AI INTERVIEW MODE
+--------------------------------------------------
+
+The user selects:
+
+- Target role
+- Experience level
+- Difficulty
+- Topic/category
+
+The AI generates interview questions.
+
+Question types can include:
+
+- Technical
+- Conceptual
+- Project-based
+- Situational
+
+The user answers.
+
+The system evaluates the answer and provides:
+
+- What was correct
+- What was missing
+- How the answer could be improved
+- Suggested ideal answer
+- Follow-up question
+
+The experience should feel like an interactive mock interview rather than a static question list.
+
+--------------------------------------------------
+10. DASHBOARD
+--------------------------------------------------
+
+The dashboard should become the central workspace after the user completes their profile.
+
+It should provide an overview of:
+
+- Target role
+- Current progress
+- Skill gaps
+- Roadmap progress
+- Recommended projects
+- Resume status
+- Interview preparation
+
+The dashboard should prioritize the most important next action.
+
+Example:
+
+"Your next recommended step"
+
+→ Complete JavaScript Async Programming
+
+Do not overwhelm the user with too many cards or unnecessary information.
+
+--------------------------------------------------
+11. PAGES / SCREENS
+--------------------------------------------------
+
+At minimum, design the following:
+
+1. LANDING PAGE
+
+Include:
+- Hero section
+- Product explanation
+- How it works
+- Core capabilities
+- CTA
+- Modern hackathon-quality visual design
+
+2. PROFILE SETUP
+
+Include:
+- Skills
+- Experience level
+- Projects
+- Interests
+- Target role
+- Learning availability
+
+3. ANALYSIS PAGE
+
+Include:
+- AI analysis loading state
+- Skill gaps
+- Strengths
+- Role requirements
+
+4. DASHBOARD
+
+Include:
+- Profile summary
+- Skill gaps
+- Roadmap progress
+- Next recommended action
+- Projects
+
+5. ROADMAP PAGE
+
+Include:
+- Detailed personalized roadmap
+- Progress tracking
+- Phases
+- Topics
+- Estimated duration
+
+6. PROJECT GENERATOR
+
+Include:
+- Generate projects
+- Project cards
+- Detailed project view
+
+7. RESUME ANALYZER
+
+Include:
+- Upload/paste resume
+- Analysis
+- Suggestions
+
+8. INTERVIEW MODE
+
+Include:
+- Interview setup
+- Question
+- Answer
+- Evaluation
+- Next question
+
+--------------------------------------------------
+12. TECHNOLOGY STACK
+--------------------------------------------------
+
+FRONTEND
+
+- React
+- Tailwind CSS
+
+BACKEND
+
+- Node.js
+- Express.js
+
+DATABASE
+
+- MongoDB
+
+AI
+
+- LLM API
+
+DEPLOYMENT
+
+- Vercel for frontend
+- Render/Railway or equivalent for backend
+
+Use a clean separation between frontend, backend, database and AI services.
+
+--------------------------------------------------
+13. AI ARCHITECTURE
+--------------------------------------------------
+
+DO NOT call the LLM directly from the React frontend.
+
+Use:
+
+React
+↓
+Express Backend
+↓
+AI Service
+↓
+LLM API
+
+The API key must remain server-side in environment variables.
+
+Example:
+
+.env
+
+LLM_API_KEY=...
+
+Never expose API keys in:
+
+- React source code
+- client-side environment variables
+- GitHub repository
+- frontend network requests
+
+Create a separate AI service/module so that the LLM provider can be replaced later without rewriting the entire application.
+
+--------------------------------------------------
+14. DEVELOPMENT STRATEGY
+--------------------------------------------------
+
+Build the application incrementally.
+
+PHASE 1 — FRONTEND FOUNDATION
+
+Build:
+- Layout
+- Navigation
+- Landing page
+- Dashboard
+- Forms
+- Components
+
+PHASE 2 — USER FLOW
+
+Implement:
+
+Profile
+→ Skills
+→ Target role
+→ Analysis
+→ Dashboard
+
+PHASE 3 — AI INTEGRATION
+
+Connect the backend to the LLM API.
+
+PHASE 4 — CORE INTELLIGENCE
+
+Implement:
+- Gap analysis
+- Roadmap generation
+- Project generation
+
+PHASE 5 — ADDITIONAL MODULES
+
+Implement:
+- Resume analyzer
+- Interview mode
+
+PHASE 6 — POLISH
+
+Add:
+- Loading states
+- Error states
+- Empty states
+- Responsive design
+- Animations
+- Form validation
+- Accessibility
+- Final UI polish
+
+--------------------------------------------------
+15. DESIGN REQUIREMENTS
+--------------------------------------------------
+
+A Design.md file is provided with this prompt.
+
+IMPORTANT:
+Treat Design.md as the PRIMARY SOURCE OF TRUTH for the visual design.
+
+Before implementing the UI:
+
+1. Read and understand Design.md completely.
+2. Follow its design system.
+3. Reuse its:
+   - Colors
+   - Typography
+   - Spacing
+   - Component styles
+   - Border radius
+   - Shadows
+   - Layout principles
+   - Animation principles
+4. Do not introduce a conflicting design system.
+5. Do not randomly change the visual language.
+6. Maintain consistency across every page.
+
+The final application should feel like one cohesive product.
+
+If Design.md specifies a particular component or visual pattern, follow it instead of inventing a replacement.
+
+--------------------------------------------------
+16. UX REQUIREMENTS
+--------------------------------------------------
+
+The application should feel:
+
+- Modern
+- Premium
+- Fast
+- Intelligent
+- Professional
+- Student-friendly
+- Hackathon-ready
+
+Avoid:
+
+- Generic dashboard templates
+- Excessive gradients
+- Unnecessary animations
+- Too many cards
+- Information overload
+- Fake AI effects
+- Generic chatbot-style UI
+
+Animations should support the experience rather than distract from it.
+
+--------------------------------------------------
+17. APPLICATION STATES
+--------------------------------------------------
+
+Every major feature should have:
+
+LOADING STATE
+
+Show what the AI is currently doing.
+
+Examples:
+"Analyzing your skills..."
+"Mapping your target role..."
+"Building your personalized roadmap..."
+
+ERROR STATE
+
+Clearly explain what went wrong and provide a retry option.
+
+EMPTY STATE
+
+Explain what the user needs to provide.
+
+SUCCESS STATE
+
+Clearly communicate the generated result.
+
+--------------------------------------------------
+18. RESPONSIVE DESIGN
+--------------------------------------------------
+
+The application must work properly on:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+Do not build a desktop-only interface.
+
+--------------------------------------------------
+19. CODE QUALITY
+--------------------------------------------------
+
+Use:
+
+- Reusable React components
+- Clean folder structure
+- Meaningful variable names
+- Modular backend architecture
+- Environment variables for secrets
+- Proper error handling
+- API abstraction
+- Reusable UI components
+
+Avoid:
+
+- One giant React component
+- Hardcoded repeated data
+- API keys in source code
+- Unnecessary dependencies
+- Duplicate logic
+
+--------------------------------------------------
+20. IMPORTANT MVP RULE
+--------------------------------------------------
+
+This is a 24-hour hackathon project.
+
+Prioritize:
+
+1. Working user flow
+2. Excellent UI
+3. Reliable AI functionality
+4. Strong demo experience
+5. Meaningful outputs
+
+Do NOT spend excessive time building unnecessary infrastructure.
+
+If a feature cannot be fully implemented within the hackathon timeframe, create a clean mock/demo state rather than breaking the core user experience.
+
+--------------------------------------------------
+21. CRITICAL IMPLEMENTATION INSTRUCTION
+--------------------------------------------------
+
+Do not start by generating the entire application blindly.
+
+First:
+
+1. Read Design.md.
+2. Analyze the requirements in this prompt.
+3. Propose the application architecture.
+4. Identify the pages/components required.
+5. Identify the API endpoints required.
+6. Identify the MongoDB collections/schema.
+7. Identify the AI prompts/services required.
+8. Explain the implementation plan.
+9. Identify any ambiguities or technical risks.
+10. Clearly separate MVP requirements from future possibilities.
+
+Then wait for confirmation before beginning the full implementation.
+
+Do not invent additional product features unless explicitly requested.
+
+The goal is to build a polished, coherent and demo-ready CareerSense MVP.
+
+The core product philosophy is:
+
+"CareerSense doesn't just tell students what to learn. It identifies the gap between where they are and where they want to go, then turns that gap into an actionable roadmap and projects."
+
+Build the product around this principle.

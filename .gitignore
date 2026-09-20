@@ -1,0 +1,23 @@
+# Environment variables & secrets (CRITICAL: contains MongoDB URI & Gemini API Key)
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production builds
+client/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

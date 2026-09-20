@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: #f5f5f5;
+    --canvas-soft: #fafafa;
+    --ink: #0c0a09;
+    --primary: #292524;
+    --hairline: #e7e5e4;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #f5f5f5;
+    color: #4e4e4e;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    background-color: #f5f5f5;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: 0.16px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100vw;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Editorial Serif Display Hierarchy - Always Weight 300 */
+  h1, h2, h3, .font-serif-display {
+    font-family: 'EB Garamond', 'Waldenburg', Georgia, serif;
+    font-weight: 300;
+  }
+}
+
+@layer utilities {
+  .text-display-mega {
+    font-family: 'EB Garamond', 'Waldenburg', Georgia, serif;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -1.92px;
+  }
+
+  .text-display-xl {
+    font-family: 'EB Garamond', 'Waldenburg', Georgia, serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.96px;
+  }
+
+  .text-display-lg {
+    font-family: 'EB Garamond', 'Waldenburg', Georgia, serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.17;
+    letter-spacing: -0.36px;
+  }
+
+  .text-display-md {
+    font-family: 'EB Garamond', 'Waldenburg', Georgia, serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.13;
+    letter-spacing: -0.32px;
+  }
+
+  .text-display-sm {
+    font-family: 'EB Garamond', 'Waldenburg', Georgia, serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0px;
+  }
+
+  .text-caption-upper {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+  }
+
+  /* Atmospheric Radial Gradients */
+  .bg-orb-mint {
+    background: radial-gradient(circle, rgba(167, 229, 211, 0.45) 0%, rgba(167, 229, 211, 0) 70%);
+  }
+
+  .bg-orb-peach {
+    background: radial-gradient(circle, rgba(244, 197, 168, 0.45) 0%, rgba(244, 197, 168, 0) 70%);
+  }
+
+  .bg-orb-lavender {
+    background: radial-gradient(circle, rgba(200, 184, 224, 0.45) 0%, rgba(200, 184, 224, 0) 70%);
+  }
+
+  .bg-orb-sky {
+    background: radial-gradient(circle, rgba(168, 200, 232, 0.45) 0%, rgba(168, 200, 232, 0) 70%);
+  }
+
+  .bg-orb-rose {
+    background: radial-gradient(circle, rgba(232, 184, 196, 0.45) 0%, rgba(232, 184, 196, 0) 70%);
+  }
+}
+
+/* Subtle animation for background atmospheric blooms */
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+.animate-float-subtle {
+  animation: float-subtle 8s ease-in-out infinite;
+}
