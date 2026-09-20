@@ -4,9 +4,9 @@
  * Proxied in development via vite.config.js (/api -> http://localhost:5000/api)
  */
 
-const API_BASE = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`
-  : '/api';
+// Direct Backend URL
+const BACKEND_URL = 'https://careersense.onrender.com';
+const API_BASE = `${BACKEND_URL}/api`;
 
 export const api = {
   // --- Profiles ---
