@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Compass } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,9 +11,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-2 space-y-3 sm:space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-ink flex items-center justify-center text-white">
-                <Compass className="w-3.5 h-3.5" />
-              </div>
+              <img 
+                src="/favicon-32x32.png" 
+                alt="CareerSense Logo" 
+                className="w-7 h-7 rounded-lg object-contain shadow-sm"
+              />
               <span className="font-serif text-[20px] tracking-tight text-ink font-light">
                 CareerSense
               </span>

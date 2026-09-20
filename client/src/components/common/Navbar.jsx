@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
-import { Menu, X, Compass } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,9 +26,11 @@ export default function Navbar() {
           to="/" 
           className="flex items-center gap-2 group transition-opacity hover:opacity-85"
         >
-          <div className="w-8 h-8 rounded-full bg-ink flex items-center justify-center text-white shadow-sm">
-            <Compass className="w-4 h-4" />
-          </div>
+          <img 
+            src="/favicon-32x32.png" 
+            alt="CareerSense Logo" 
+            className="w-8 h-8 rounded-lg object-contain shadow-sm"
+          />
           <div className="flex items-baseline gap-1.5">
             <span className="font-serif text-[22px] tracking-tight text-ink font-light">
               CareerSense
