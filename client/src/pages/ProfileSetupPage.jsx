@@ -6,6 +6,8 @@ import Badge from '../components/common/Badge';
 import Input from '../components/common/Input';
 import AtmosphericOrb from '../components/common/AtmosphericOrb';
 import { useProfile } from '../context/ProfileContext';
+import { useAuth } from '../context/AuthContext';
+import AuthModal from '../components/auth/AuthModal';
 import { 
   Target, 
   Plus, 
@@ -110,6 +112,20 @@ export default function ProfileSetupPage() {
   };
 
   const currentSuggestions = suggestedSkills[profile.targetRole] || suggestedSkills['Full Stack Developer'];
+
+  const { isAuthenticated } = useAuth();
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(true);
+
+  if (!isAuthenticated) {
+    return (
+      <div className="relative max-w-4xl mx-auto py-20 text-center">
+        <h2 className="text-2xl font-serif text-ink mb-4">Authentication Required</h2>
+        <p className="text-body mb-8">Please login to start your assessment and save your progress.</p>
+        <Button variant="primary" onClick={() => setIsAuthModalOpen(true)}>Login / Sign up</Button>
+        <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} />
+      </div>
+    );
+  }
 
   return (
     <div className="relative max-w-4xl mx-auto py-6 space-y-8">

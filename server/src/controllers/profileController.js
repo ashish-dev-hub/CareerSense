@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
 const UserProfile = require('../models/UserProfile');
+const User = require('../models/User');
 
 // File-backed persistent fallback store when MongoDB is offline / unwhitelisted
 const DATA_FILE = path.join(__dirname, '../../data/profiles.json');
@@ -42,8 +43,20 @@ const isDbConnected = () => mongoose.connection.readyState === 1;
 // @access  Public
 const createProfile = async (req, res, next) => {
   try {
+    const profileData = { ...req.body };
+    if (req.user) {
+      profileData.userId = req.user._id;
+      profileData.email = req.user.email;
+    }
+
     if (isDbConnected()) {
-      const profile = await UserProfile.create(req.body);
+      const profile = await UserProfile.create(profileData);
+      
+      // Link back to user if authenticated
+      if (req.user) {
+        await User.findByIdAndUpdate(req.user._id, { profileId: profile._id });
+      }
+      
       return res.status(201).json(profile);
     }
 
@@ -149,10 +162,37 @@ const updateProfile = async (req, res, next) => {
   }
 };
 
+// @desc    Get profile by logged in user
+// @route   GET /api/profiles/me
+// @access  Private
+const getProfileByUser = async (req, res, next) => {
+  try {
+    if (!req.user) {
+      return res.status(401).json({ message: 'Not authorized' });
+    }
+
+    if (isDbConnected()) {
+      const profile = await UserProfile.findOne({ userId: req.user._id });
+      if (profile) return res.json(profile);
+    }
+
+    // Check memory store for fallback
+    const memProfile = Array.from(inMemoryProfiles.values()).find(p => p.email === req.user.email);
+    if (memProfile) {
+      return res.json(memProfile);
+    }
+
+    res.status(404).json({ message: 'Profile not found' });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   createProfile,
   getProfile,
   updateProfile,
+  getProfileByUser,
   inMemoryProfiles,
   saveProfiles
 };

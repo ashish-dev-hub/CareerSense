@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { api } from '../services/api';
+import { useAuth } from './AuthContext';
 
 const ProfileContext = createContext(null);
 
@@ -288,6 +289,8 @@ const DEFAULT_PROFILE = {
 };
 
 export function ProfileProvider({ children }) {
+  const { isAuthenticated, user } = useAuth();
+  
   // Load initial profile from localStorage if saved
   const [profile, setProfile] = useState(() => {
     try {
@@ -357,6 +360,37 @@ export function ProfileProvider({ children }) {
     loadData();
     return () => { mounted = false; };
   }, [profileId]);
+
+  // Sync profile when user logs in
+  useEffect(() => {
+    if (!isAuthenticated) return;
+
+    let mounted = true;
+    const fetchUserAuthProfile = async () => {
+      try {
+        setIsLoading(true);
+        const dbProfile = await api.getMyProfile();
+        if (mounted && dbProfile) {
+          setProfile(dbProfile);
+          setProfileId(dbProfile._id);
+          localStorage.setItem('cs_profile_id', dbProfile._id);
+          if (dbProfile.intelligence?.gapAnalysis) {
+            setDerivedIntelligence(dbProfile.intelligence.gapAnalysis);
+          } else {
+            setDerivedIntelligence(calculateGapAnalysis(dbProfile));
+          }
+        }
+      } catch (e) {
+        // 404 means user hasn't created a profile yet, that's fine.
+        console.log('No existing profile found for user:', e.message);
+      } finally {
+        if (mounted) setIsLoading(false);
+      }
+    };
+
+    fetchUserAuthProfile();
+    return () => { mounted = false; };
+  }, [isAuthenticated, user?.email]); // Re-run if user email changes
 
   const saveProfileToDb = async () => {
     setIsLoading(true);

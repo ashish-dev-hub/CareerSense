@@ -6,6 +6,8 @@ const { errorHandler, notFound } = require('./middleware/errorHandler');
 const profileRoutes = require('./routes/profileRoutes');
 const analysisRoutes = require('./routes/analysisRoutes');
 
+const authRoutes = require('./routes/authRoutes');
+
 const app = express();
 
 // Security middleware
@@ -18,6 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use('/api/auth', authRoutes);
 app.use('/api/profiles', profileRoutes);
 app.use('/api/analysis', analysisRoutes);
 

@@ -22,6 +22,11 @@ const projectSchema = new mongoose.Schema({
 });
 
 const userProfileSchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    default: null
+  },
   name: { type: String, required: true },
   email: { type: String, default: "" },
   targetRole: { type: String, required: true },
