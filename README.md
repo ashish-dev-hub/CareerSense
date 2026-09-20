@@ -358,7 +358,7 @@ CareerSense connects:
 ```text
 Learning
    ↓
-Skills
+Skills 
    ↓
 Projects
    ↓
