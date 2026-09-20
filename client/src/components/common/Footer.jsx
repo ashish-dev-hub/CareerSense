@@ -5,11 +5,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-canvas border-t border-hairline py-10 px-4 sm:py-16 sm:px-6 mt-auto">
+    <footer className="bg-canvas border-t border-hairline py-8 px-4 sm:py-16 sm:px-6 mt-auto">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-10 mb-8 sm:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-10 mb-8 sm:mb-12">
           {/* Brand Column */}
-          <div className="col-span-2 md:col-span-2 space-y-3 sm:space-y-4">
+          <div className="col-span-1 md:col-span-2 space-y-3 sm:space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <img 
                 src="/favicon-32x32.png" 
