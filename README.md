@@ -1,4 +1,4 @@
-# CareerSense 🚀
+# CareerSense 
 
 ### Know What to Learn. Know What to Build. Know When You're Ready.
 
@@ -6,7 +6,7 @@ CareerSense is an AI-powered career intelligence platform for college students a
 
 ---
 
-## 🌟 Problem
+##  Problem
 
 Students have access to hundreds of courses, roadmaps, coding platforms, resume tools, and interview resources, but these resources are often disconnected.
 
@@ -18,7 +18,7 @@ CareerSense connects a student's current skills with their target career and con
 
 ---
 
-## 💡 Solution
+##  Solution
 
 CareerSense analyzes:
 
@@ -48,32 +48,32 @@ Readiness Check
 
 ---
 
-## ✨ Core Features
+##  Core Features
 
-### 🧠 Skill Assessment
+###  Skill Assessment
 Evaluate technical knowledge and identify strengths and weaknesses.
 
-### 🎯 AI Gap Analysis
+###  AI Gap Analysis
 Compare current capabilities with the skills expected for the selected target role.
 
-### 🗺️ Personalized Roadmap
+###  Personalized Roadmap
 Generate a structured learning path based on individual skill gaps and priorities.
 
-### 🏗️ AI Project Generator
+###  AI Project Generator
 Recommend projects specifically designed to strengthen missing skills.
 
-### 📄 Resume Analyzer
+###  Resume Analyzer
 Analyze a resume and suggest improvements, missing skills, projects, and achievements.
 
-### 🎤 AI Interview Mode
+###  AI Interview Mode
 Generate role-specific questions and provide AI-powered feedback on answers.
 
-### 🔄 Career Feedback Loop
+###  Career Feedback Loop
 Connect skill gaps, learning goals, projects, resume improvements, and interview preparation into one workflow.
 
 ---
 
-## 🎯 Target Users
+##  Target Users
 
 - College students
 - Freshers
@@ -84,7 +84,7 @@ Connect skill gaps, learning goals, projects, resume improvements, and interview
 
 ---
 
-## 🧩 Example User Journey
+##  Example User Journey
 
 A student wants to become an **AI/ML Engineer**.
 
@@ -116,7 +116,7 @@ Statistics → Machine Learning → Deep Learning → MLOps
 
 ---
 
-## 🔥 What Makes CareerSense Different?
+##  What Makes CareerSense Different?
 
 CareerSense is not just a resume analyzer, roadmap generator, or interview chatbot.
 
@@ -142,7 +142,7 @@ Am I ready?
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```text
                     ┌──────────────────┐
@@ -165,7 +165,7 @@ Am I ready?
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### Frontend
 - React.js
@@ -198,7 +198,7 @@ Am I ready?
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 CareerSense/
@@ -227,7 +227,7 @@ CareerSense/
 
 ---
 
-## ⚙️ Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 
@@ -285,7 +285,7 @@ http://localhost:5173
 
 ---
 
-## 🔐 Environment Variables & Security
+##  Environment Variables & Security
 
 Never commit secrets to GitHub.
 
@@ -308,7 +308,7 @@ dist/
 
 ---
 
-## 🤖 AI Workflow
+##  AI Workflow
 
 Gemini acts as the intelligence layer:
 
@@ -339,19 +339,19 @@ AI capabilities include:
 
 ---
 
-## 🚀 Future Scope
+##  Future Scope
 
-- 🔎 Real-time job-market skill intelligence
-- 💼 Internship and job matching
-- 🐙 GitHub portfolio analysis
-- 🔗 LinkedIn profile analysis
-- 📈 Skill-progress and readiness tracking
-- 🎓 College placement dashboard
-- 🤖 Continuous AI career mentor
+-  Real-time job-market skill intelligence
+-  Internship and job matching
+-  GitHub portfolio analysis
+-  LinkedIn profile analysis
+-  Skill-progress and readiness tracking
+-  College placement dashboard
+-  Continuous AI career mentor
 
 ---
 
-## 🏆 Hackathon Vision
+##  Hackathon Vision
 
 CareerSense connects:
 
@@ -373,9 +373,9 @@ Career Readiness
 
 ---
 
-## 📌 Project Status
+##  Project Status
 
-🚧 **Hackathon Project — Under Active Development**
+ **Hackathon Project — Under Active Development**
 
 Current focus:
 
@@ -390,14 +390,14 @@ Current focus:
 
 ---
 
-## 👥 Team
+##  Team
 
 **CareerSense — HackDevengers 2.0**
 
-Built with ❤️ for students navigating the path from learning to employability.
+Built with  for students navigating the path from learning to employability.
 
 ---
 
-## 📄 License
+##  License
 
 This project is currently developed as a hackathon project. Add an appropriate open-source license if the project is later released publicly.
