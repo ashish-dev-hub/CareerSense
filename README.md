@@ -390,9 +390,12 @@ Current focus:
 
 ---
 
-##  Team
+---
 
-**CareerSense — HackDevengers 2.0**
+## GrowthX Off Campus Verification
+
+Off Campus Code: `CZHPMC`
+
 
 Built with  for students navigating the path from learning to employability.
 
